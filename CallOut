@@ -1,0 +1,6 @@
+HTTPRequest feedRequest = new HTTP Request();
+feedRequest.setEndpoint('callout:SalesforceNC/services/data/v32.0');
+feedRequest.setMethod('GET');
+HTTP http = new HTTP();
+HTTPResponse feedResponse = http.send(feedRequest);
+System.debug(feedResponse.getBody());
